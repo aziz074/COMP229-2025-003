@@ -13,6 +13,7 @@ const AddInventory = () => {
         const { name, value } = event.target;
         setProduct(formData => ({ ...formData, [name]: value }));
     }
+    
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log("Submitting product: ", product);
