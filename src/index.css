@@ -2,13 +2,16 @@ html {
   position: relative;
   min-height: 100%;
 }
+
 body {
   font: "Lucida Grande", Helvetica, Arial, sans-serif;
-  padding-bottom:20px;
+  padding-bottom: 20px;
 }
+
 h1 {
   color: #00B7FF;
 }
+
 footer {
   position: fixed;
   left: 0;
@@ -19,6 +22,25 @@ footer {
   text-align: center;
   font-size: small;
 }
-.flash{
+
+.flash {
   color: red;
+}
+
+.logo {
+  position: absolute;
+  top: -8px;
+  left: -10px;
+  width: 100px !important;
+  height: 80px !important;
+  margin: 10px;
+  border-radius: 20%;
+}
+
+body {
+  background-image: url('./assets/image_background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }

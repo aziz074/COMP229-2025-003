@@ -12,9 +12,10 @@ function Layout() {
 
     return (
         <>
-            <h1>My Portfolio</h1>
+            <h1>Welcome to Aziz Portfolio</h1>
+            <img src={image_logo} alt="Logo" className='logo' />
             <nav className="navbar">
-                <img src={image_logo} alt="Logo" className='logo' />
+                
                 <Link to="/">
                     <i className="fas fa-home"></i> Home
                 </Link>
@@ -24,8 +25,10 @@ function Layout() {
                 <Link to="/projects">
                     <i className="fas fa-project-diagram"></i> Projects
                 </Link>
-                <Link to="/services">Services</Link>
-                <Link to="/contact">Contact</Link>
+                <Link to="/services">
+                    <i className="fas fa-concierge-bell"></i> Services</Link>
+                <Link to="/contact">
+                    <i className="fas fa-envelope"></i> Contact</Link>
                 <Link to="/inventory/list">
                     <i className="fa-regular fa-rectangle-list"></i>Inventory List
                 </Link>
