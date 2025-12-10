@@ -107,3 +107,78 @@
   color: #09719a;
   bottom: 30px;
 }
+
+/* Center container */
+.services-container {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* List spacing */
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+/* Card row: image + text */
+.row {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  width: 75%;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.12);
+}
+
+/* ⭐ MAKE IMAGES BIGGER AND CLEARER */
+.row img {
+  width: 220px;        /* INCREASED from 140px → 220px */
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Text content area */
+.text-content {
+  max-width: 600px;
+  text-align: left;
+}
+
+/* Title */
+.text-content h3 {
+  margin: 0 0 12px;
+  font-size: 24px;
+  color: #004a63;
+}
+
+/* Paragraph */
+.text-content p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.about-container {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+}
+
+.about-container p {
+    width: 60%;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    line-height: 1.7;
+    font-size: 18px;
+    text-align: left;
+}
