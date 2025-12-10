@@ -1,41 +1,37 @@
 import { jwtDecode } from "jwt-decode";
 
-const authenticate = (token, cb)=>{
+const authenticate = (token) => {
   if (typeof window !== "undefined") {
-    sessionStorage.setItem('token', token);
+    console.log("Saving token:", token);
+    sessionStorage.setItem("token", token);
 
-    let decoded = jwtDecode(token);
-    sessionStorage.setItem('username', decoded.username)
+    const decoded = jwtDecode(token);
+    console.log("Decoded:", decoded);
+
+    if (decoded.email) {
+      sessionStorage.setItem("username", decoded.email);
+    }
   }
-  cb();
-}
+};
 
-const isAuthenticated = ()=>{
-  if (typeof window === "undefined") {
-    return false;
-  }
-  return !!sessionStorage.getItem('token');
-}
+const getToken = () => {
+  if (typeof window === "undefined") return null;
+  const token = sessionStorage.getItem("token");
+  console.log("Getting token:", token);
+  return token;
+};
 
-const getToken = ()=>{
-  if (typeof window === "undefined") {
-    return false;
-  }
-  return sessionStorage.getItem('token');
-}
+const isAuthenticated = () => {
+  return !!getToken();
+};
 
-const getUsername = ()=>{
-  if (typeof window === "undefined") {
-    return false;
-  }
-  return sessionStorage.getItem('username');
-}
+const getUsername = () => {
+  return sessionStorage.getItem("username");
+};
 
-const clearJWT = ()=>{
-  if (typeof window !== "undefined") {
-    sessionStorage.removeItem('token');
-    sessionStorage.removeItem('username');
-  }
-}
+const clearJWT = () => {
+  sessionStorage.removeItem("token");
+  sessionStorage.removeItem("username");
+};
 
-export { authenticate, isAuthenticated, getToken, getUsername, clearJWT }
+export { authenticate, isAuthenticated, getToken, getUsername, clearJWT };

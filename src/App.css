@@ -6,8 +6,6 @@
 }
 
 .logo {
-  /* height: 6em; */
-  /* padding: 1.5em; */
   will-change: filter;
   transition: filter 300ms;
 
@@ -16,7 +14,7 @@
   margin-right: 1rem;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #054057);
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
@@ -76,20 +74,36 @@
 
 .navbar {
   display: flex;
+  align-items: flex-start;
+  justify-content: center;
   align-items: center;
-  background-color: #1a1a1a; /* change to your preferred color */
+  background-color: color(srgb rgb(73, 45, 45) green blue); /* change to your preferred color */
   padding: 0.5rem 1rem;
 }
 
 .navbar a {
-  color: white;
+  color: #09719a;
   text-decoration: none;
   margin: 0 0.75rem;
   font-size: 1rem;
   transition: color 0.3s ease;
+  
 }
 
 .navbar a:hover {
-  color: #ffcc00; /* highlight color */
+  color: rgb(81, 69, 69); /* highlight color */
 }
 
+.navbar {
+  left: -21.5%;
+  top: 38px;
+}
+
+.footer{
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #09719a;
+  bottom: 30px;
+}

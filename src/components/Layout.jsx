@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import image_logo from "../assets/image_logo.png"
+import image_logo from "../assets/image_logo (2).png"
 import { isAuthenticated, getUsername, clearJWT } from './auth/auth-helper';
 
 function Layout() {
@@ -14,8 +14,8 @@ function Layout() {
         <>
             <h1>Welcome to Aziz Portfolio</h1>
             <img src={image_logo} alt="Logo" className='logo' />
+
             <nav className="navbar">
-                
                 <Link to="/">
                     <i className="fas fa-home"></i> Home
                 </Link>
@@ -32,17 +32,28 @@ function Layout() {
                 <Link to="/inventory/list">
                     <i className="fa-regular fa-rectangle-list"></i>Inventory List
                 </Link>
-                {!isAuthenticated() &&
+
+                {!isAuthenticated() && (
                     <Link to="/users/signin">
                         <i className="fa-solid fa-right-to-bracket"></i> Signin
-                    </Link>}
-                {isAuthenticated() &&
+                    </Link>
+                )}
+
+                {isAuthenticated() && (
                     <Link to="/" onClick={signoutClick}>
                         <i className="fa-solid fa-right-from-bracket"></i> Sign-out ({getUsername()})
-                    </Link>}
+                    </Link>
+                )}
             </nav>
+
             <br />
             <hr />
+
+            {/* ⭐ FOOTER MUST BE INSIDE RETURN */}
+            <footer className="footer">
+                <hr />
+                <p>&copy; 2024 Aziz Portfolio. All rights reserved.</p>
+            </footer>
         </>
     );
 }

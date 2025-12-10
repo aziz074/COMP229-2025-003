@@ -1,10 +1,10 @@
 import ListComponent from "./ListComponent";
-import photo08 from '../assets/photo08.jpg';
-import photo09 from '../assets/photo09.jpg';
+import services from '../assets/services (1).png';
+import services1 from '../assets/services (2).png';
 
 const data = [
-     { imagePath: photo08, text: 'This is the first Service Offered' },
-     { imagePath: photo09, text: 'This is the second Service Offered' },
+     { imagePath: services, text: 'This is the first Service Offered' },
+     { imagePath: services1, text: 'This is the second Service Offered' },
 ];
 
 function Services(){

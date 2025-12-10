@@ -1,17 +1,25 @@
 import ListComponent from "./ListComponent";
-import photo10 from '../assets/photo10.jpg';
-import photo11 from '../assets/photo11.jpg';
-import photo12 from '../assets/photo12.jpg';
+import bankingApp from '../assets/bankingApp.png';
+import smartHotelManagment from '../assets/smartHotelManagment.png';
+import linuxProject from '../assets/linuxProject.png';
 
 const data = [
      { 
-          imagePath: photo10, 
-          title: 'Title 01',
-          text: 'This is the first item'
+          imagePath: bankingApp, 
+          title: 'Banking App',
+          text: 'I built a C# console-based Banking Application that simulates real-world account operations such as deposits, withdrawals, authentication, and transaction logging.'
      },
-     { imagePath: photo11, title: 'Title 02', text: 'This is the second item' },
-     { imagePath: photo12, title: 'Title 03', text: 'This is the third item' },
-]
+     { 
+          imagePath: smartHotelManagment, 
+          title: 'Smart Hotel Management', 
+          text: 'QuickStay is a hotel management system we designed using software engineering principles like CRC modeling and workflows.'
+     },
+     { 
+          imagePath: linuxProject, 
+          title: 'Linux Project', 
+          text: 'I set up and managed a Linux virtual machine using SSH for secure remote access and system administration.'
+     }
+];
 
 function Projects(){
     return(

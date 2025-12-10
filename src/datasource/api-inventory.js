@@ -3,6 +3,10 @@ import { getToken } from "../components/auth/auth-helper"
 
 const list = async () => {
     try {
+
+         //test line to see if token is available
+        console.log("GET TOKEN BEFORE FETCH:", getToken());
+
         let response = await fetch(apiURL + '/api/inventory/', {
             method: 'GET',
             headers: {
@@ -18,6 +22,9 @@ const list = async () => {
 
 const remove = async (id) => {
     try {
+           //test line to see if token is available
+        console.log("GET TOKEN BEFORE FETCH:", getToken());
+
         let response = await fetch(apiURL + '/api/inventory/' + id, {
             method: 'DELETE',
             headers: {
@@ -34,6 +41,10 @@ const remove = async (id) => {
 
 const create = async (product) => {
     try {
+
+        //test token retrieval
+        console.log("GET TOKEN BEFORE FETCH:", getToken());
+
         let response = await fetch(apiURL + '/api/inventory/', {
             method: 'POST',
             headers: {
@@ -51,6 +62,10 @@ const create = async (product) => {
 
 const read = async (id) => {
     try {
+
+        //test line to see if token is available
+        console.log("GET TOKEN BEFORE FETCH:", getToken());
+
         let response = await fetch(apiURL + '/api/inventory/' + id, {
             method: 'GET',
             headers: {
@@ -66,6 +81,11 @@ const read = async (id) => {
 
 const update = async (product, id) => {
     try {
+
+         //test line to see if token is available
+        console.log("GET TOKEN BEFORE FETCH:", getToken());
+
+
         let response = await fetch(apiURL + '/api/inventory/' + id, {
             method: 'PUT',
             headers: {

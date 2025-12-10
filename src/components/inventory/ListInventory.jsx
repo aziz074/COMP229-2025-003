@@ -5,30 +5,27 @@ import { Link } from 'react-router-dom';
 
 const ListInventory = () => {
     const [inventoryList, setInventoryList] = useState([]);
-    let [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(true);
 
     const loadInventory = () => {
-        list().then((data) => {
-            if (data) {
+        list()
+            .then((data) => {
                 setInventoryList(data || []);
-
                 setIsLoading(false);
-            }
-        }).catch(err => {
-            alert(err.message);
-            console.log(err);
-        });
-    }
+            })
+            .catch((err) => {
+                alert(err.message);
+                console.log(err);
+            });
+    };
 
-    // When the component loads.
     useEffect(() => {
         loadInventory();
     }, []);
 
-    // When a item is removed.
     const handleRemove = () => {
         loadInventory();
-    }
+    };
 
     return (
         <>
@@ -38,12 +35,14 @@ const ListInventory = () => {
                     Add a new Item
                 </Link>
             </div>
-            <div className="table-responsive" >
+
+            <div className="table-responsive">
                 {isLoading && <div>Loading...</div>}
-                {!isLoading &&
+
+                {/* ⭐ Show table ONLY when there are items */}
+                {!isLoading && inventoryList.length > 0 && (
                     <table className="table table-bordered table-striped table-hover">
                         <thead>
-                            {/* -- Header Row-- */}
                             <tr>
                                 <th className="text-center">Item</th>
                                 <th className="text-center">Qty</th>
@@ -54,19 +53,24 @@ const ListInventory = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {/* -- Repeatable Template Row -- */}
-                            {inventoryList.map(product =>
+                            {inventoryList.map((product) => (
                                 <ListItemInventory
                                     key={product.id}
                                     product={product}
                                     onRemoved={handleRemove}
                                 />
-                            )}
+                            ))}
                         </tbody>
-                    </table>}
+                    </table>
+                )}
+
+                {/* ⭐ When list is empty: show NOTHING (no header, no table) */}
+                {!isLoading && inventoryList.length === 0 && (
+                    <div style={{ paddingTop: "20px" }}></div>
+                )}
             </div>
         </>
-    )
-}
+    );
+};
 
 export default ListInventory;

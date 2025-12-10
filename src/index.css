@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-  color: #00B7FF;
+  color: #0f7da9;
 }
 
 footer {
@@ -31,12 +31,14 @@ footer {
   position: absolute;
   top: -8px;
   left: -10px;
-  width: 100px !important;
-  height: 80px !important;
+  width: 150px !important;
+  height: 110px !important;
   margin: 10px;
-  border-radius: 20%;
+  border-radius: 650%;
 }
 
+
+/* //this part is done */
 body {
   background-image: url('./assets/image_background.png');
   background-size: cover;
