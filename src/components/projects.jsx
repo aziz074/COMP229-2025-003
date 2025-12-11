@@ -1,7 +1,7 @@
 import ListComponent from "./ListComponent";
 import bankingApp from '../assets/bankingApp.png';
 import smartHotelManagment from '../assets/smartHotelManagment.png';
-import linuxProject from '../assets/linuxProject.png';
+import linuxProject from '../assets/linuxproject.png';
 
 const data = [
      { 
