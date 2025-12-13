@@ -39,7 +39,7 @@ function NotFound() {
             <input
                 type="email"
                 value={email}
-                placeholder="Azizafghan226@mail.com"
+                placeholder="Jhon123@mail.com"
                 onChange={(e) => setEmail(e.target.value)}
                 style={inputStyle}
             />
