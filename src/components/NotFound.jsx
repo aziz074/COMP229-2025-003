@@ -25,7 +25,7 @@ function NotFound() {
             </p>
 
             {/* Name Field */}
-            <label style={{ fontWeight: "bold" }}>Namw:</label>
+            <label style={{ fontWeight: "bold" }}>Name:</label>
             <input
                 type="text"
                 value={name}
