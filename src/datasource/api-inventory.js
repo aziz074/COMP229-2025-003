@@ -1,4 +1,4 @@
-let apiURL = import.meta.env.VITE_APP_APIURL
+let apiURL = import.meta.env.VITE_API_URL;
 import { getToken } from "../components/auth/auth-helper"
 
 const list = async () => {

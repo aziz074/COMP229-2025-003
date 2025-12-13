@@ -1,21 +1,21 @@
 import ListComponent from "./ListComponent";
-import bankingApp from '../assets/bankingApp.png';
-import smartHotelManagment from '../assets/smartHotelManagment.png';
-import linuxProject from '../assets/linuxproject.png';
+import bankingapp from '../assets/bankingApp.png';
+import smartHotelmanagment from '../assets/smartHotelManagment.png';
+import linuxproject from '../assets/linuxproject.png';
 
 const data = [
      { 
-          imagePath: bankingApp, 
+          imagePath: bankingapp, 
           title: 'Banking App',
           text: 'I built a C# console-based Banking Application that simulates real-world account operations such as deposits, withdrawals, authentication, and transaction logging.'
      },
      { 
-          imagePath: smartHotelManagment, 
+          imagePath: smartHotelmanagment, 
           title: 'Smart Hotel Management', 
           text: 'QuickStay is a hotel management system we designed using software engineering principles like CRC modeling and workflows.'
      },
      { 
-          imagePath: linuxProject, 
+          imagePath: linuxproject, 
           title: 'Linux Project', 
           text: 'I set up and managed a Linux virtual machine using SSH for secure remote access and system administration.'
      }
