@@ -25,7 +25,7 @@ function NotFound() {
             </p>
 
             {/* Name Field */}
-            <label style={{ fontWeight: "bold" }}>Aziz</label>
+            <label style={{ fontWeight: "bold" }}>Namw:</label>
             <input
                 type="text"
                 value={name}
@@ -35,7 +35,7 @@ function NotFound() {
             />
 
             {/* Email Field */}
-            <label style={{ fontWeight: "bold", marginTop: "15px" }}>Email Address</label>
+            <label style={{ fontWeight: "bold", marginTop: "15px" }}>Email Address:</label>
             <input
                 type="email"
                 value={email}
@@ -45,7 +45,7 @@ function NotFound() {
             />
 
             {/* Message Field */}
-            <label style={{ fontWeight: "bold", marginTop: "15px" }}>Message</label>
+            <label style={{ fontWeight: "bold", marginTop: "15px" }}>Message:</label>
             <textarea
                 value={message}
                 placeholder="Write your message..."
